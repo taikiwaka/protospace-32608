@@ -15,6 +15,11 @@ class PrototypesController < ApplicationController
     end
   end
 
+  def show
+    @comment = Comment.new
+    @comments = @prototype.comments
+  end
+
   private
 
   def prototype_params
